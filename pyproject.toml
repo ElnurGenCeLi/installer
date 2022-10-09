@@ -1,0 +1,14 @@
+[tool]
+[tool.poetry]
+name = "NeonUserbot_Deployer"
+version = "1.0"
+description = "Automatic Deploy NeonUserBot to Heroku"
+authors = ["SakirBey"]
+[tool.poetry.dependencies]
+python = "^3.8"
+bs4 = "*"
+gitpython = "*"
+heroku3 = "*"
+requests = "*"
+rich = "*"
+telethon = "*"
