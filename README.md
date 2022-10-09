@@ -2,4 +2,4 @@
 
 # Termux kurulum
 
-```bash <(curl -L https://bit.ly/3rG2xT8)```
+```bash <(curl -L https://bit.ly/3SMOqrp)```
