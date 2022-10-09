@@ -68,6 +68,6 @@ echo -e $BOSLUK
 echo "⌛ GEREKSİNİMLERİ KURUYORUM..."
 echo "⌛ INSTALLING REQUIREMENTS..."
 echo -e $BOSLUK
-cd neoninstaller
+cd installer
 pip install -r requirements.txt
 python -m neon_installer
