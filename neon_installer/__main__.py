@@ -28,7 +28,7 @@ def connect (api):
     return heroku_conn
 
 def createApp (connect):
-    appname = "majesteuserbot" + str(time() * 1000)[-4:].replace(".", "") + str(random.randint(0,500))
+    appname = "neonuserbot" + str(time() * 1000)[-4:].replace(".", "") + str(random.randint(0,500))
     try:
         connect.create_app(name=appname, stack_id_or_name='container', region_id_or_name="eu")
     except requests.exceptions.HTTPError:
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     onemli(LANG['GETTING_STRING_SESSION'])
     stri, aid, ahash = main()
     basarili(LANG['SUCCESS_STRING'])
-    SyperStringKey = "MajesteUserBot"
+    SyperStringKey = "NeonUserBot"
     baslangic = time()
 
 
@@ -107,14 +107,14 @@ if __name__ == "__main__":
     basarili(LANG['SUCCESS_APP'])
     onemli(LANG['DOWNLOADING'])
 
-    SyperStringKey = "NeonUserBot"
+    SyperStringKey = "GenceliUserBot"
     GiperStringKey = "ElnurGenCeLi/"
     InvalidKey = "http://github.com/" 
     str1 = InvalidKey+GiperStringKey+SyperStringKey
 
-    if os.path.isdir("./NeonUserBot/"):
-        rm_r("./NeonUserBot/")
-    repo = Repo.clone_from(str1,"./NeonUserBot /", branch="master")
+    if os.path.isdir("./GenceliUserBot/"):
+        rm_r("./GenceliUserBot/")
+    repo = Repo.clone_from(str1,"./GenceliUserBot /", branch="main")
     onemli(LANG['DEPLOYING'])
     app = hgit(heroku, repo, appname)
     config = app.config()
@@ -146,7 +146,7 @@ if __name__ == "__main__":
     config['TMP_DOWNLOAD_DIRECTORY'] = "./downloads/"
     config['TZ'] = TZ
     config['TZ_NUMBER'] = "1"
-    config['UPSTREAM_REPO_URL'] = "https://github.com/ElnurGenCeLi/NeonUserBot"
+    config['UPSTREAM_REPO_URL'] = "https://github.com/ElnurGenCeLi/GenceliUserBot"
 
     config['WARN_LIMIT'] = "3"
     config['WARN_MODE'] = "gmute"
