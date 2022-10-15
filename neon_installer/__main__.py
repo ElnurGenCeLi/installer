@@ -107,14 +107,14 @@ if __name__ == "__main__":
     basarili(LANG['SUCCESS_APP'])
     onemli(LANG['DOWNLOADING'])
 
-    SyperStringKey = "GenceliUserBot"
+    SyperStringKey = "userbot"
     GiperStringKey = "ElnurGenCeLi/"
     InvalidKey = "http://github.com/" 
     str1 = InvalidKey+GiperStringKey+SyperStringKey
 
-    if os.path.isdir("./GenceliUserBot/"):
-        rm_r("./GenceliUserBot/")
-    repo = Repo.clone_from(str1,"./GenceliUserBot /", branch="main")
+    if os.path.isdir("./userbot/"):
+        rm_r("./userbot/")
+    repo = Repo.clone_from(str1,"./userbot /", branch="main")
     onemli(LANG['DEPLOYING'])
     app = hgit(heroku, repo, appname)
     config = app.config()
@@ -146,7 +146,7 @@ if __name__ == "__main__":
     config['TMP_DOWNLOAD_DIRECTORY'] = "./downloads/"
     config['TZ'] = TZ
     config['TZ_NUMBER'] = "1"
-    config['UPSTREAM_REPO_URL'] = "https://github.com/ElnurGenCeLi/GenceliUserBot"
+    config['UPSTREAM_REPO_URL'] = "https://github.com/ElnurGenCeLi/userbot"
 
     config['WARN_LIMIT'] = "3"
     config['WARN_MODE'] = "gmute"
